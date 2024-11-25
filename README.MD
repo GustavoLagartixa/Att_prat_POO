@@ -1,7 +1,11 @@
 # Projeto: Simulação de Urna Eletrônica
 
 ## Integrantes:
-Axel de Oliveira Palmeira - 1814768
+Axel de Oliveira Palmeira
+Arthur I. Castro 
+Enzo da S. Passos 
+Gustavo S. de Almeida 
+Matheus Neves P. Silva.
 
 ## Descrição
 Este projeto consiste em uma simulação de uma urna eletrônica desenvolvida em Python, utilizando a biblioteca `tkinter` para a interface gráfica. O sistema permite:
