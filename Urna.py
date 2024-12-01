@@ -46,3 +46,18 @@ class UrnaEletronica:
             with open(arquivo, "rb") as f:
                 return pickle.load(f)
         return {"branco": 0, "inválido": 0, **{nome: 0 for nome in self.candidatos.values()}}
+
+    def salvar_votos(self, arquivo):
+        """Salva os votos no arquivo .pkl."""
+        with open(arquivo, "wb") as f:
+            pickle.dump(self.votos, f)
+
+    def create_login_interface(self):
+        """Interface inicial para o login do eleitor."""
+        self.clear_interface()
+
+        tk.Label(self.master, text="Digite o título de eleitor", font=("Helvetica", 14)).pack(pady=10)
+        self.titulo_entry = tk.Entry(self.master, font=("Helvetica", 16))
+        self.titulo_entry.pack(pady=10)
+
+        tk.Button(self.master, text="Confirmar", font=("Helvetica", 12), bg="green", fg="white", command=self.validar_eleitor).pack(pady=10)
